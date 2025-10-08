@@ -22,10 +22,7 @@
             que quan tenim les fòrmules en linía és a dir text normal i una fòrmula en la mateixa hem de escriure al principi
             un o dos dolars. Potser a la mateixa linía o en el mateix parragraf sense salts de linía ni centrats.
             */
-            
-        
-
-            
+    
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
             svg: { fontCache: 'global' } // Svg vol dir vectors escalables, es poden fer molt grans o petits
             //les imatges poden ser de dos tipus svg o mapa de bit. Els mapes de bit estan fets de pixels que són els png o jpg 
@@ -42,13 +39,37 @@
   i arduino deriva d'ell. Podem fer robòtica emprant en llenguatge <a href="https://processing.org"&gt;.
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    //hi ha tres grans families de lletres sans-serif i mono space
-    // Serif en francés o internacionalment, serifada o amb adornaments, és quan una lletra te uns restants 
-    //Sans-serif, significa sans serif, és a dir sense adornaments.
-    //Monospace, significa lletra monoespaciada que ocupa cada lletra
+    /*hi ha tres grans families de lletres sans-serif i mono space
+    Serif en francés o internacionalment, serifada o amb adornaments, és quan una lletra te uns restants 
+    Sans-serif, significa sans serif, és a dir sense adornaments.
+    Monospace, significa lletra monoespaciada que ocupa cada lletra
+    */
+/* Model de caixes css o box model css, en el box model tenim una capa al voltant del
+    contingut o content que es diu padding, al voltant del padding es troba el border i al voltant del border es troba el margin.
+    Margin, border i padding són propietats css( properties) que van seguides de dos punts i un valor o value en pixels
+    Tots els css són iguals, primer es posa el nom de la etiqueta html o tag a la qual volem donar-li un o diversos estils,
+    per exemple h2 o button o canvas... Després del tag es posa una clau de tipus "curly bracket" i a sota es posa
+    propietat1:valor1; i en la línia següent propietat2:valor2;
+        si la propietat és color el valor és #333. El número decimal, és un número hexadecimal en base 16.
+        Vol dir que els números hexadecimals són 0 al 9, A(vol dir 10), B(vol dir 11), C(vol dir 12), D(vol dir 13), E(vol dir 14), F(vol dir 15).
+        Els codis de colors tenen tres valors hexadecimals que van del 00 fins al FF, és a dir que tinc una combinació que va des del
+        00000 fins al FFFFFF. Els dos primers digits són el color vermell, els dos següents són el color verd, i el dos útils són blaus.
+        Recordar rgb(red,green,blue). Quantes combinacions de colors tenim? 256 elevat a la 3-16 milions 700 mil colors diferents.
+        El color es pot expressar en hexadecimal o en rgb en decimal, per exemple #FF0000, és 255,0,es pot expressar d'un altre manera?
+        A vegades noms en angles com red o noms que puc trobar amb color names html en google. h2 de la línia 67 controla el h2 
+        que es troba a la línia 82 i el #333 és el color gris. LLavors que fa la línia 67 i la línia 82? Fa que el títol de la línia
+        82 sigui gris*/ 
+       
         h2 { color: #333; }
         input[type="number"] { width: 70px; margin-right: 10px; }
+     /*input és una etiqueta html que permet l'entrada de dades per l'usuari i al ser de tipus number només accepta números,
+        no accepta lletres com podem veure a la línia 70 i a lés línies 106, 107,112,113,118 i 119. El input és com una caixa de text per a que 
+        escrigui l'usuari i tindrà una amplada definida a la línia 70 amb css width és amplada en angles i amb 70 pixels d'amplada
+        puc escriure més d'un número d'ample, i perquè deixo marge a la dreta de 10 píxels? Per tenir espai i no s'uneix l'entrada d'informació 
+        amb  l'entrada de l'usuari, seria un marge dintre de la caixa.*/
+    
         button { padding: 8px 16px; margin-top: 10px; cursor: pointer; }
+    /*aquiiiiiiiiiiiiiiiiiiiiiiiiii*/
         .result { margin-top: 20px; background-color: #f0f0f0; padding: 10px; border-radius: 5px; }
         canvas { border: 1px solid #ccc; margin-top: 20px; background-color: #f9f9f9; }
         .teoria { background: #eef; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
