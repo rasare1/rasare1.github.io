@@ -36,20 +36,30 @@
     body {
 
       font-family: Arial, sans-serif;
-
+   /* La línia anterior busca lletra arial per tot el que surti dins del body (linia76) i si no la trob utilitza una lletra sense serif*/
       margin: 20px;
-
-    }
+     /*Margin és el marge exterior. CSS té un model de caixa o box model en el que el contingut o content està envoltat pel padding i aquest
+      està envoltat pel border i el border està envoltat pel margin. Margin, padding i border són propietats CSS que puc aplica a diferents 
+      etiquetes o tags html. Després de la propietat hi ha un valor en píxels, a vegades hi ha dos valors en píxels i a vegades tres valors.
+      Si hi ha un valor s'aplica adalt, abaix, a la dreta i a la esquerra. Si hi ha dos valors s'aplica el primer adalt i abaix i el segon a 
+      la dreta i a l'esquerra. Si hi ha tres valors s'aplica tres valors: el primer valor s'aplica adalt, el segon a la dreta i a l'esquerra, 
+      i el tercer abaix. Si hi ha quatre numeros, el primer número és el marge superior, el segon número és la dreta, el tercer abaix, i el 
+      quart l'esquerra. Tot el body amb tot el contingut html visible per l'usuari amb paragrafs, dibuixos(canvas), tindrà un marge de 20px per
+      tots els costats i no queden les lletres enganxades als estrems de l'ordinador o del móbil.*/
+  }
 
 
     .equation {
-
+      /* El punt que hi ha devant de equation és molt important perquè indica que es tracta de una clase class="equation", s'utilitza a la línia 149
+      i fa que les equacions tinguin 20px més que el body, només d'adalt i abaix i 0 a dreta i esquerra*/
+      
       margin: 20px 0;
 
     }
 
 
     .results {
+      /* Es una clase que no s'utilitza de moment, surtirien la lletra en negreta*/
 
       font-weight: bold;
 
@@ -61,7 +71,8 @@
     #output, #robotCanvas {
 
       display: none;
-
+/*Output i robotCanvas te un hastag devant que significa identificador ID únic que no és pot repetir a diferencia de una clase que es pot repetir*/
+      
     }
 
 
