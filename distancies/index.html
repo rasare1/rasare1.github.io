@@ -7,7 +7,7 @@
 
   <script>
     window.MathJax= {
-      tex: {inlineMath:[['$','$'], ^'\\(','\\)']], displayMath: [['$$','$$']]},
+      tex: {inlineMath:[['$','$'], ['\\(','\\)']], displayMath: [['$$','$$']]},
       svg: {fontCache:'global'}
     };
   </script>
@@ -38,16 +38,15 @@
 <table>
   
 <tr><th>Latitud (DMS)</th><td>36° 0′ 45" N</td></tr>
-</table>
+<tr><th>Longitud (DMS)</th><td>5° 36' 20.16" W</td></tr>
+ </table>                                                    
+<div class="step">Per convertir a decimal: $$Lat = 36+\frac{0}{60}+\frac{45}{3600} =
   
-<tr><th>Longitud (DMS)</th><td>5° 36' 20.16" W</td></tr
-                                                     
-<div class="step">Per convertir a decimal: $$Lat = 36+\frac{0}{60}+\frac{45}{3600) =
 36.0125^\circ$$</div>
   
 <div class="step">I la longitud: SSLon = -(5+\frac{36}{60}+\frac{20.16}{3600}) =
   
--5.6056^\circSS</div>
+-5.6056^\circ$$</div>
 
 <h3>Ceuta</h3>
 
@@ -63,17 +62,17 @@
 
 35.8883^\circ$$</div>
 
-<div class="step">Longitud en decimal: $SLon = -(5+\frac{18}{60}+\frac{56.16) (3600}) =
+<div class="step">Longitud en decimal: $$Lon = -(5+\frac{18}{60}+\frac{56.16}{3600}) =
 
--5.3156^\circSS</div>
+-5.3156^\circ~$$</div>
 
 <h2>1) Diferències angulars</h2>
 
 <p>Calcularem la diferència de latitud i longitud per després aplicar Haversine:</p>
 
-<div class="step">$$\Delta \varphi = Lat_(Ceuta) - Lat_(Tarifa) = -0.1242^\circ$$</div>
+<div class="step">$$\Delta \varphi = Lat_^{Ceuta} - Lat_{Tarifa} = -0.1242^\circ$$</div>
 
-<div class="step">$$\Delta \lambda = Lon_(Ceuta) - Lon_{Tarifa) = 0.2900^\circ$$</div>
+<div class="step">$$\Delta \lambda = Lon_¨{Ceuta} - Lon_{Tarifa} = 0.2900^\circ$$</div>
 
 <p>Convertim a radians, ja que trigonometria utilitza radians:</p>
 
