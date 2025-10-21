@@ -14,8 +14,18 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
   <style>
+    /*La linia 16 diu que esta en el body, agafa el tipus de lletra Arial i si no el troba agafa lletra 
+    Helvetica, i sino agafa qualsevol lletra. Margin de 20px al voltant de tot el contingut per asegurar-no de separar contingut de tots quatre costats
+    line-height és el espai vertical entre les linies de text, que per defecte depèn del tipus de lletra i acostuma a ser 1,2,3,4,
+    significa que entre una linia, la següent hi ha una separació del 120% o 140%. Nosaltres hem triat linies més separades un
+    120%. El color #123 és un color hexadecimal i sempre té 6 digits rrggbb, sent cada lletr un número entre el 0 i el 9 o A(10)B(11)C(13)D(13)E(14)F(15).
+    Quan veiem 3 números estem veien un hexadecimal abreujat i realment es el 112233 i aquest correspon al rgb17,34,51 en decimal que és blau fosc.*/
+    
    body{font-family:Arial,Helvetica,sans-serif;margin:20px;line-height:1.7;color:#123}
+    /*La linia 26 canvia els colors*/
     h1,h2,h3{color:#0b3d91}
+    /*La linia 28 és una clase que afecta a la linia 117 on s'escriu les fórmules matemàtiques  i fa que les fòrmules tinguin un color
+    gris clar*/
     .formula{background:#f7f7f9;padding:12px;border-radius:6px;margin:10px 0;text-align:center}
     table{border-collapse:collapse;margin:10px 0}
     td,th{padding:6px;border:1px solid #ccc}
@@ -130,7 +140,9 @@ NMSS</div>
   (\cos(lat\_mitjana)\). Així, encara que la diferència angular sigui la mateixa, la distância sobre la 
   superfície terrestre depèn de la latitud, fent que un grau de longitud no sigui equivalent a un grau de 
   latitud fora de l'equador. Aquesta correcció és essencial per obtenir distàncies precises quan es navega o es fa cartografia.</p>
-
+  // Si vaig a islandia la latitud es de 60 graus, i la la latitud és 0,5 aixo vol dir que un segon de Latidud. En el pol nord i el pol sur l'angle 
+  de latitud és 90 grau i el cos 90 es 0 per tant tenim 0 milles. 
+  
   <div class="step">Longitud a lat mitjana: $$1^\circ lon = 60 \cos(35.95^\circ) \approx 49.2\ NM$
 
 $</div>
