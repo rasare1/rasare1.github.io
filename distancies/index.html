@@ -28,23 +28,48 @@
     gris clar*/
     .formula{background:#f7f7f9;padding:12px;border-radius:6px;margin:10px 0;text-align:center}
     table{border-collapse:collapse;margin:10px 0}
+    /*Espai intern.  Es un gris clar perque, gris es quan els 3 numeros son iguals.
+    C és un numero hexadecimal(17), i es de color clar perquè s'aproxima #FFFFF que es el gris més clar. */
     td,th{padding:6px;border:1px solid #ccc}
+    /**/
     .step{margin:10px 0;padding-left:15px;border-left:3px solid #0b3d91}
+    /* Quan tenim un punt al principi de css és una classe i es pot posar més cops, quan teim un #, és un identificador per tant es
+    utilitzar una vegada.
+    La classe step surt a les linies 70,71,79,80..Perquè ens permet escriure els passos detallats amb les fòrmules .
+    Volem un espai al voltants de cada pas matemàtic de 10px en totes les dirreccions. També volem que només a la esquerra 
+    hi hagi un marge interior (paadding left). Vull una barra vertical blava sólida de 3px per a marcar cada pas/step,
+    és de 3px de gruix i sólida*/
+    
     .note{margin:8px 0;padding:8px;background:#fff8dc;border-left:4px solid #ffcc00}
-    img {
+    /*Note es una nota explicativa que volem que surti separada i destacada del text, li posem un marge vertical 
+    al voltant de la nota  de 8px i també intern de la mateixa mida, li posem un background diferent color crema
+    i una barra groga de 4px a l'esquerra*/
+    img { 
+      /*La linia 50 afecta a totes les imatges del document*/
     max-width: 100%;
+      /* La línia 49 fa que la imatge sigui més ample que el seu contenidor i que s'intenti apliar al 100%*/
     height:auto;
+      /*Això fa que mantengui les proporcions de la imatge, perquè li hem dit que l alçada sigui automàtica i que
+      la aplada sigui la mateixa que la del contenidor. Això farà s'adapti la imatge al ample de la pantalla i que no
+      es defori*/
     display: block;/* opcional: elimina pequeños espacios debajo de la imagen*/
+      /*Evita petits espais sota la imatge que apareixen per defecte am línies, si no poso res enten display: inline i
+      deix un espai a sota de la imatge que volem*/
     }
     
   </style>
 </head>
 <body>
   <h1>Problema de navegació - Tarifa - Ceuta</h1>
+  <!-- Hi es títol gran, h2 mes petit(n subtítol), hi es encara més petit. Existeixen h1,h5 i h6 que poden ser
+  més petits que el paràgraf, però depèn del tipus/font de lletra. -->
+  
   <h2>0) Conversió de cordenades (DMS - decimal)</h2>
   <p>Per treballar amb fórmules trigonomètriques, necessitem les coordenades en decimal. Acontinuació convertim pas a pas.</p>
 
   <h3>Tarifa</h3>
+  <!-- Les taules han tenir la etiqueta table per començar i acabar, cada filera/línia de la taula s'anomena 
+  en anglés row i l'etiqueta tr vol dir table row/filera de taula i ha de posar-se al principi i al final de table row.
 <table>
   
 <tr><th>Latitud (DMS)</th><td>36° 0′ 45" N</td></tr>
