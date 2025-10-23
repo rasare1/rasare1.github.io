@@ -69,7 +69,7 @@
 
   <h3>Tarifa</h3>
   <!-- Les taules han tenir la etiqueta table per començar i acabar, cada filera/línia de la taula s'anomena 
-  en anglés row i l'etiqueta tr vol dir table row/filera de taula i ha de posar-se al principi i al final de table row.
+  en anglés row i l'etiqueta tr vol dir table row/filera de taula i ha de posar-se al principi i al final de table row.-->
 <table>
   
 <tr><th>Latitud (DMS)</th><td>36° 0′ 45" N</td></tr>
@@ -79,10 +79,14 @@
   
 36.0125^\circ$$</div>
   
-<div class="step">I la longitud: SSLon = -(5+\frac{36}{60}+\frac{20.16}{3600}) =
+<div class="step">I la longitud: SSLon = -(5+\frac{36}{60}+\frac{20.16}{3600}) =-5.6056^\circ$$</div>
   
--5.6056^\circ$$</div>
-
+/*Un divisor(div) com el de la linia 82 és un troç de codi que te un sistema de identificador que pot ser un id,
+  en comptes de class= posarem id= i en aquest segon cas només podria haver una sola vegada, per exemple id="step1" i no 
+  una classe. Recorda que en el codi css tenim un <step la línia 44, si tinguessim "step1" com a identificador hauriem 
+  de posar a la línia 44 #step1. Quina es la funcio de la classe i del identificador? La classe el podem posar més d'un cop i és més general, i el id es un
+  element únic*/
+  
 <h3>Ceuta</h3>
 
 <table>
@@ -92,6 +96,14 @@
   <tr><th>Longitud (DMS)</th><td>5° 18' 56.16" W</td></tr>
 
 </table>
+  <!--A continuació veiem diferents codis amb javascript emprant la biblioteca MathJax, el doble dolar serveix per avisar al navegador de 
+    continuació el codi es MathJax i l'ha de renderitzar o visualitzar segons el LaTeX que és el llenguatge matemàtic.
+    Anem a explicar els diferents símbols:
+    \franc{A} {B} significa que dividim A entre B{A/B}.
+    35.8883^\circ significa el ^ (sombreret) elevat a i la barra inclinada circ (/circ) significa º el símbol del grau.
+    Si poso \Delta és una delta majuscula que te forma de tringle
+    \Lambda
+    \varphi es la lletra grega φ, -->
 
 <div class="step">Latitud en decimal: SSLat = 35+ \frac{53}{60}+\frac{17.88}{3600} =
 
