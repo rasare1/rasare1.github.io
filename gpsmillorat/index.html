@@ -41,6 +41,9 @@
     Dintre del trk hi ha una etiqueta <name> que hi ha el nom de la ruta, i a continuación hi ha una etiqueta trkpt, abans hi ha un trkseg
       que es una secuencia de trkpt o track points que a vegades s'anomenen waypoints o punts de referencia, cada track point té una latitud i una longitud
   per exemple <trkpt lat="41.842" lon="1.936"></trkpt>
+  Podem afegir com per exemple  <ele> que significa elevació (elevation) que es l'alçada en metres del punt GPX es un format obert, que és a dir ni hi ha
+  cap empresa propietaria i es un formt molt utilitzat per dispositius gps, per programes que utilitzen mape digitals o per apps que utilitzen rutes.
+  Es comptible amb GIS que son sistemes d'informació geogràfica.
   -->
 <button onclick="mesura()">Mesura</button>
 <button onclick="exportCSV()">Exporta CSV</button>
@@ -62,19 +65,45 @@
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!--La Línia d'adal carrega leaflet.js i fa possible que funcionin els mapes
+  Leaflet e una biblioteca javascript de codi obert. Codi obert vol dir que tothom té acces i pot veure internamenr el codi
+  Per exemple google maps no es de codi obert, sino que pertanys a Google, es codi tancat o codi propietari que no només puc veure 
+  tot sino que tampoc el puc modificar (similar a libreofice) es gratiss i és de codi obert i inclou editor de text
+  Leaflet fa mapes interactius compatibles amb el móbil-->
 <script>
 let mesures = [];
+  /*Let mesures significa crear una variable global perquè afecta a tot l'script que comença a la línia 74 i inicialment amb un 
+  conjunt de valors{} que es coneix com array buit amb la intenció d'emmagatzemar lectures gps la latitud i longitut 
+  let eap crea una instancia de mapa tipus leaflet i l'esigma a un element, el que tingui una id anomenada map que en aquest cas es un divisor o area buida de laa pàgina que 
+  esta a la línia 63 i que es el lloc on apareixeraa el mapa. Si no haguès escrit la línia 63, la 79 generaría un error, perquè no trobaria 
+  un lloc on posar el mapa.
+  El setView dona una vista inicial del mapa i les coordenades inicials són 0,0 que està a la situat en el Golf de Guinea i el 2 es el zoom i el zoom 2
+  es molt allunyat vista global (zoom 8, veuriem Cataluny, zoom 13 veuriem Martorell, zoom 0 veuriem tot el mon i el zoom 18 veuriem l'institut) */
+  
 let map = L.map('map').setView([0,0], 2);
+  
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  /*L.title Layer, title significa mosaic per tant es una capa de mosaic de openstreetmap es la versió de codi obert i lliure del 
+  codi tancat de google maps. X i Y son les coordenades  de latitud i longitud que ara són unes variables i 7 es la variable del zoom.
+  */
   attribution: '© OpenStreetMap contributors'
+  
 }).addTo(map);
+  /*AddTo(map) afegeix les capes al mapa creat. Si la meva web té milers de peticions per segon pot tenir problemes perquè està anant a un
+  servidor lliure de OpenStreetMap. Si pssés això, podría descarregar OpenStreetMap en el nostreb github perquè és un codi obert*/
+  
 let polyline = L.polyline([], {color:'red'}).addTo(map);
+/*Polyline dibuixara diverses línies rectes i cadascuna que es farà la mesura de mesura de latitud i longitud, la crida un botó a la línia 46*/
 
-function mesura() {
+  function mesura() {
+    
   const estat = document.getElementById("estat");
+    /*L'estat es una variable però que té molts pocs valors constant i per això el definim com const. Podrà ser diferents valors com
+    obtenint GPS, error, mesura guardada... Si aquesta variable no l'haguessim posat en un <div>, L'usuari veurà una línia en blanc */
   estat.textContent = "🔍 Obtenint GPS amb precisió alta...";
 
   if (!navigator.geolocation) {
+    
     alert("La geolocalització no és compatible amb aquest navegador.");
     return;
   }
