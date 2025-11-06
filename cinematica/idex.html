@@ -30,9 +30,25 @@
     <style>
         /* ===== COLORS & ROOT VARIABLES ===== */
         :root{
-            /*significa arrel en angles, es una paraula que s'utilitza en el món informàtic, per exemple el linux, el document
-            arrel es l'html, antigamen es deia html{propietat: valor} pero no es fa servir root(--variable:valor), perquè te una prioritat
-            mes alta que html. Afecta a tota la pagina */
+             /* Significa arrel en angles, es una paraula que s'utilitza molt en el món informàtic, per exemple el linux, que es un sistema operatiu 
+            alternatiu i millor que el windows. En aquest cas root significa l'element significa el document arrel del html, aquest és el propi html.
+            Antigament es deia html "{propietat: valor}" , però es fa servir "root{--variable:valor}" perque té una prioritat més alta que html. 
+            Perque tot els estils que estiguin dintre de root afectaran a tota la pagina web html. Perque "--variable" és una variable CSS global,
+            que puc utilitzar vàries vegades. Aquestes variables s'anomenen variables CSS personalitzades, o custom propierties. 
+            Per exemple la variable primary és un color que surt diverses vegades, per exemple en botons d'aquest mateix color en el fons, en els titols, en àrees, com header
+            que es la capçelera principal. Això permet tenir el codi més organitzat, perquè el canvio una vegada en el root i es canvia en diferents 
+            llocs a la vegada. També permet codis més coherents visualment, ja que és el mateix color, i és més fàcil d'ampliar, com el mode fosc i clar,
+            El primary és el color principal de la web, en aquest cas só tons foscos per capçeleres i fons.
+            El secondary é sun color secundari i s'aplica en enllaços i coses que li vols donar importància.
+            El accent dona encara més importància, per alertes o botons importants.
+            Light és un color clar que és fa servir per fons o textos suaus, que no vulguis destacar o per marcar que és una cosa diferent.
+            Muted és un color apagat per textos secundaris.
+            Succes é sun color verd, que significa exit o que s'ha fet bé.
+            Card-bg és el fons d'una targeta o contenidor.
+            Glass és un efecte de vidre translucid, perque 0.6 és el canal alpha o transparència que va desprès de rgb, que significa el color.
+            Radius és el arrodoniment de les cantonades lg= arrodoniment gran (large) sm= arrodoniment petit (small).
+            Shadow és una ombra suau per donar profunditat a un block o contenedor. */
+            
             --primary: #2c3e50;
             --secondary: #3498db;
             --accent: #e74c3c;
@@ -49,22 +65,40 @@
 
         /* ===== BASIC LAYOUT ===== */
         *{box-sizing:border-box}
+        /* L'asterisc * és un selector universal, per exemple si jo vull buscar un docuemnt i no m'en recordo del seu nom poso "*.docx" i apareixen tots els documents.
+        Si poso "*.js" buscara tots els documents que tenen js(javascript). Posar un asterisc afecta a totes les etiquetes html.
+        La propietat box-sizing cobtrola com es calcula l'amplada i l'alçada d'un element, concretament si el padding i el border s'inclouen dins 
+        de la mida o no. En el cas borderbox, que es el valor de la propietat box-sizing, l'amplada i l'alçada de tots els elements inclouen el border
+        i el padding, en canvi si en comptes de border-bix posés content-box l'amplada total seria és gran i hauries de sumar el padding i el bordr.
+        És més fàcil per un disenyador perque pot fer border-box perquè té en comte totes les mides, i apliques el box mode. */
         html,body{
             height:100%;
             margin:0;
             padding:0;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg,#f5f7fa 0%, #d8e1ef 100%);
+            /*Linear-gradient fa una transició de color de fons(degradat)*/
             color:#222;
+            /*Es el color del text*/
         }
 
         .app {
+            /*Quan hi ha un punt abans de app significa que és un identificador o ID. A la línia 305 hi ha un contenidor o divisor que
+            tindrà una amplada màximai uns */
             max-width: 1100px;
             margin: 28px auto;
             padding: 20px;
         }
 
         header {
+
+            /*A una pàgina web pot haver una capçalera o header i a la part inferior un peu de pàgina o footer.
+            Quan el gradient línel és a de 90 graus, perquè posa 90deg vol dir 90 degrees vol dir que giro la pantalla 
+            90 graus vol dir que en quin sentit va el degradat de colorss, en aquest cas gira a la dreta. Si és 180 graus
+            significa que el degradat va cap abaix. I si és 270deg girara cap a l'equerra el degradat de colors. I si 
+            Son 0deg
+            Linear gradient te tres arguments que són el angle, el color inicial i el final
+            */
             background: linear-gradient(90deg,var(--primary),#24414a);
             color: #fff;
             padding: 22px;
