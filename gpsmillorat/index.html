@@ -107,9 +107,15 @@ let polyline = L.polyline([], {color:'red'}).addTo(map);
     alert("La geolocalització no és compatible amb aquest navegador.");
     return;
   }
-
+/*GetcurrentPosition és una part l'API de Geolocalització, pot funcionar amb únic argument(posició) però pot contenir fins a 3.
+Primer argument = CaallBack d'exit, funció anónima executada quan el navegador obté la posició. Només rep un objecte anomenat "pos".
+Segon argument = CallBack d'error, funció anónima executada quan el navegador no obté la posició 
+Tercer argument = Objecte d'opcions, permet regular com funciona el gps.
+*/
   navigator.geolocation.getCurrentPosition(
     (pos) => {
+      /*La funció fletxa ens ajuda a escriure menys codi, em permet no definir una funció auxiliar per agafar la posició
+      La funció ER es el segon argument d'error. ER. Message et dona info de cosas que estan malaments*/
       const lat = pos.coords.latitude;
       const lon = pos.coords.longitude;
       const ubicacio = document.getElementById("ubicacioInput").value || `Punt ${mesures.length+1}`;
