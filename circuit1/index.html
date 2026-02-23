@@ -2,9 +2,28 @@
   <head>
   </head>
   <body>
-    <iframe src=""></iframe>
+    <iframe src="https://www.tinkercad.com/things/bJNKjClXQBF-blinking"></iframe>
       <pre><code> 
-      
+      // C++ code
+//
+//Al princi sempre hi ha de haver 
+//un comentari explicant que el codi que fa a continuació
+//Primer codi a executar sempre, perquè ens hem d'asegurar
+//que la placa es reconeguda i el port és reconegut
+//Aquest codi es coneix com codi de Blinking o parpelleig i el que fa
+//es encendre i apagar el led
+void setup()
+{
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
       </code></pre>
   </body>
 </html>
