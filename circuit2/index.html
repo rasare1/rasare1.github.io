@@ -27,7 +27,8 @@
   <p> A la imatge de mes amunt podem veure que amb 0 volts es mantindrà constant el pols i a 5 es mantindra constant</p>
   <p> Podem veure el 50% de PWM vol dir que està fent 0-1-0-1-0-1... de forma que la amplada del 0 volts és a dir, quant és 0 és igual a la amplada del 1 que es 5 volts.
     Això es un voltatge de 2,5V. Com un arduino té PWM que funciona com una sortidaa analògica de 8 bits és a dir, 2<sup>8</sup> combinacions de 0-255, significa que un voltatge de 2,5 volts
-  donaria 127 i la instrucció arduino serà analogwrite </p>
+  donaria 127 i la instrucció arduino serà analogWrite. Si es tracta d'un Arduino NANO ESP32 té la sortida analògica de 12 bits es a dir 2<sup>12</sup> combinacions, de 0 a 4095,
+  amb un voltatge de 3,5 volts. Per tant la instrucció seria diferent: analogWrite (2047)</p>
   
   <p> Podem veure el 25% de PWM vol dir que està fent 0-0-0-1-0-0-0-1-0-0-0-1.. de forma que la amplada del 0 volts és a dir, quant és 0 és igual a tres vegades a la aplada  del 1 que es 5 volts.
     Això es un voltatge de 1,25V (5/4). 2<sup>8</sup> combinacions de 0-255, significa que un voltatge de 1,25 volts donaria 127 i la instrucció arduino UNO serà analogwrite  </p>
