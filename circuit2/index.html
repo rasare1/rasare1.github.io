@@ -22,6 +22,17 @@
   <p> Si dono símbols la meitat del temps pujant i baixan de cero a cinc volts continuament en ona quadrada serà com si dones 2,5 volts 
   i el motor anirà a la meitat de la velocitat
   </p>
+  <p> En la següent imatge podem veure com funcina internament PWN </p>
+  <img src="PWM.png">
+  <p> A la imatge de mes amunt podem veure que amb 0 volts es mantindrà constant el pols i a 5 es mantindra constant</p>
+  <p> Podem veure el 50% de PWM vol dir que està fent 0-1-0-1-0-1... de forma que la amplada del 0 volts és a dir, quant és 0 és igual a la amplada del 1 que es 5 volts.
+    Això es un voltatge de 2,5V </p>
+  
+  <p> Podem veure el 25% de PWM vol dir que està fent 0-0-0-1-0-0-0-1-0-0-0-1.. de forma que la amplada del 0 volts és a dir, quant és 0 és igual a tres vegades a la aplada  del 1 que es 5 volts.
+    Això es un voltatge de 1,25V (5/4) </p>
+  
+  <p> Podem veure el 70% de PWM vol dir que està fent 0-1-0-1-0-1... de forma que la amplada del 0 volts és a dir, quant és 0 és igual a la  tercera part de la amplada del 1 que es 5 volts.
+    Això es un voltatge de 3,75 (0,75*)</p>
   <p> Pots veure una simulació de blinking amb arduino en el <a href="https://www.tinkercad.com/things/bJNKjClXQBF-blinking?sharecode=-vdGDZ4DCbAqel5q1jP_lyv7GpOYL0-l_yuA36e7ExI">  a continuació: </p>
   <body>
 
