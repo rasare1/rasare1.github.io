@@ -1,12 +1,21 @@
 
   <h1>Materials and Methods</h1>
-  <p>
-    To carry out this project, we used <strong>R Studio</strong> and <strong>Python</strong> to study air pollution in a scientific yet clear way.
-    We started by cleaning the data because the original files were messy and contained information we did not need. Using tools like <em>tidyverse</em>,
+
+ <p> 
+  To carry out this project, we used R Studio and Python to study air pollution in a scientific yet clear way. We started by cleaning the data because the original files were messy and contained information we did not need. Using tools like tidyverse,
     we filtered out the extra data and organized everything so the computer could perfectly understand the specific dates and hours of every record.
+
+Next, we focused on fixing the table formats. We used a special script to turn technical sensor codes into easy to read columns, such as wind speed or the levels of each pollutant gas.
+    Once the data was ready, we merged two different databases—one with weather info and one with pollution levels—into a single master table. This was essential to analyze how weather directly influences the quality of the air we breathe.
+
+Finally, we used the openair library to transform all those numbers into the charts you see on this website. We created visualizations that show how pollution changes depending on the time of day or the month of the year,
+    heatmaps to detect moments with the highest nitrogen dioxide, and wind analysis to discover which direction the most polluted air comes from.
+    This whole process allowed us to turn a long list of numbers into visual conclusions that are very easy to understand.
   </p>
-  <p>
-    Next, we focused on fixing the table formats. We used a special script to turn technical sensor codes into easy-to-read columns, such as wind speed or the levels of each pollutant gas.
-    Once the data was ready, we merged two different databases—one with weather info and one with pollution levels—into a single master table.
-  </p>
+
+
+
+
+
+
 
