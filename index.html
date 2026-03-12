@@ -9,7 +9,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   
   <style>
-    /* Estilo para las tarjetas como en tu imagen de referencia */
     .feature-card {
       background: #f8f9fa;
       border: 1px solid #e9ecef;
@@ -36,13 +35,13 @@
     }
 
     .logo { width: 40px; height: 40px; object-fit: cover; }
-    #themeToggle { border: none; background: transparent; font-size: 1.3rem; }
+    #themeToggle { border: none; background: transparent; font-size: 1.3rem; cursor: pointer; }
   </style>
 </head>
 <body data-bs-theme="light">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="logo.png" alt="Logo" class="logo rounded-circle me-2">
         <span class="fw-bold">Web de Richmonッ</span>
@@ -52,18 +51,59 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">NAUTICA</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors">Vectors</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/dinamica">Projecte Nautica</a></li>
+            <a class="nav-link dropdown-toggle" href="#" id="proj1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-diagram-project me-1"></i> NAUTICA
+            </a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors"><i class="fa-solid fa-code me-1"></i> Vectors Nàutics</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors/mapes"><i class="fa-solid fa-chip me-1"></i> Mapes Nàutics🗺️</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/circuit2"><i class="fa-solid fa-chip me-1"></i> Intensitat LED💡</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/dinamica"><i class="fa-solid fa-ship me-1"></i> Projecte Nautica🛥️</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/distancies"><i class="fa-solid fa-chip me-1"></i> Distàncies</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <button id="themeToggle" class="nav-link"><i class="fa-solid fa-moon"></i></button>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-folder-open me-1"></i> BRAÇ ROBÒTIC
+            </a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="https://rasare1.github.io/cdirecta"><i class="fa-solid fa-chart-line me-1"></i> CINEMÀTICA DIRECTA🤖</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/cinversa"><i class="fa-solid fa-cogs me-1"></i> CINEMÀTICA INVERSA🤖</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/distancies"><i class="fa-solid fa-location-dot me-1"></i> DISTÀNCIES🗺️</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/gpsmillorat"><i class="fa-solid fa-map me-1"></i> GPS🗺️</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/cinematica"><i class="fa-solid fa-robot me-1"></i> CINEMÀTICA ROBÒTICA🤖</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/dinamica"><i class="fa-solid fa-bolt me-1"></i> DINÀMICA ROBÒTICA🤖</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-microchip me-1"></i> Arduino
+            </a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="https://github.io/rasare1/barcelona"><i class="fa-solid fa-city me-1"></i> Barcelona🔵🔴</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/circuit1"><i class="fa-solid fa-eye me-1"></i> Blinking😉</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/circuit2"><i class="fa-solid fa-lightbulb me-1"></i> Intensitat LED💡</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj4Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-head-side-mask me-1"></i> AIR POLLUTION
+            </a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/introduction">Introduction</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/materialsandmethods">Materials and Methods</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/results">Results</a></li>
+              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/conclusions">Conclusions</a></li>
+            </ul>
           </li>
         </ul>
+        
+        <button id="themeToggle" class="ms-lg-3"><i class="fa-solid fa-moon"></i></button>
       </div>
     </div>
   </nav>
@@ -76,41 +116,38 @@
     </p>
 
     <div class="row g-4">
-      
       <div class="col-md-6">
         <div class="feature-card">
           <div class="icon-box text-danger"><i class="fa-brands fa-html5"></i> Estructura i Forma</div>
-          <p class="text-muted">Aquesta pàgina està escrita en <strong>html</strong> que dona l'estructura física i utilitza <strong>CSS</strong> que ens ajuda a donar forma a la web (paràgrafs, títols, llistes, imatges, links).</p>
+          <p class="text-muted">Aquesta pàgina està escrita en <strong>html</strong> que dona l'estructura física i utilitza <strong>CSS</strong> per donar forma visual.</p>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="feature-card">
           <div class="icon-box text-warning"><i class="fa-brands fa-js"></i> Interactivitat</div>
-          <p class="text-muted">A més utilitza <strong>JavaScript</strong>, que proporciona tota la interactivitat de la pàgina web, com el canvi de mode fosc i els menús dinàmics.</p>
+          <p class="text-muted">Utilitza <strong>JavaScript</strong> per proporcionar interactivitat, com el canvi de mode fosc i la gestió del menú.</p>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="feature-card">
           <div class="icon-box text-primary"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
-          <p class="text-muted">Utilitza biblioteques externes com <strong>Bootstrap</strong>, que conté CSS predefinit i ens permet fer menús desplegables i dissenys adaptatius fàcilment.</p>
+          <p class="text-muted">Utilitza la biblioteca <strong>Bootstrap</strong> per fer que la web sigui adaptativa (responsive) a qualsevol dispositiu.</p>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="feature-card">
           <div class="icon-box text-info"><i class="fa-solid fa-font-awesome"></i> FontAwesome</div>
-          <p class="text-muted">Incloem la biblioteca d'estil <strong>Font-Awesome</strong> per utilitzar icones i dibuixos vectorials que fan la interfície més intuïtiva i visual.</p>
+          <p class="text-muted">Incloem <strong>Font-Awesome</strong> per utilitzar la iconografia técnica i professional que veus en el menú.</p>
         </div>
       </div>
-
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Tu script de Dark Mode original
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle.querySelector('i');
     themeToggle.addEventListener('click', () => {
