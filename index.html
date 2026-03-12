@@ -9,47 +9,34 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   
   <style>
-    /* Estilos de Personalización */
-    :root {
-      --primary-color: #007bff;
-      --secondary-color: #6c757d;
-    }
-
-    body {
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    /* Hero Section - El toque profesional */
-    .hero {
-      background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
-      color: white;
-      padding: 100px 0;
-      margin-bottom: 40px;
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    }
-
-    body[data-bs-theme="dark"] .hero {
-      background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-    }
-
-    /* Cards de Proyectos */
-    .project-card {
-      transition: transform 0.3s;
-      border: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    /* Estilo para las tarjetas como en tu imagen de referencia */
+    .feature-card {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      padding: 25px;
       height: 100%;
+      transition: all 0.3s ease;
     }
 
-    .project-card:hover {
-      transform: translateY(-10px);
+    body[data-bs-theme="dark"] .feature-card {
+      background: #2c2c2c;
+      border-color: #444;
     }
 
-    /* Ajustes de Logo y Navbar */
-    .logo { width: 45px; height: 45px; object-fit: cover; }
-    #themeToggle { border: none; background: transparent; font-size: 1.5rem; cursor: pointer; }
-    
-    /* Navbar blanca/oscura */
-    body[data-bs-theme="dark"] .navbar { background-color: #1a1a1a !important; }
+    .feature-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transform: translateY(-5px);
+    }
+
+    .icon-box {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .logo { width: 40px; height: 40px; object-fit: cover; }
+    #themeToggle { border: none; background: transparent; font-size: 1.3rem; }
   </style>
 </head>
 <body data-bs-theme="light">
@@ -58,111 +45,81 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="logo.png" alt="Logo" class="logo rounded-circle me-2">
-        <span class="fw-bold text-primary">Richmonッ</span>
+        <span class="fw-bold">Web de Richmonッ</span>
       </a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">NAUTICA</a>
-            <ul class="dropdown-menu shadow">
-              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors">Vectors Nàutics</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/dinamica">Projecte Nautica🛥️</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors">Vectors</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/dinamica">Projecte Nautica</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-3">
-            <button id="themeToggle"><i class="fa-solid fa-moon text-warning"></i></button>
+          <li class="nav-item">
+            <button id="themeToggle" class="nav-link"><i class="fa-solid fa-moon"></i></button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container text-center text-lg-start">
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <h1 class="display-3 fw-bold">Benvinguts als Projectes</h1>
-          <p class="lead mb-4">Sóc en <strong>Richmon</strong>, alumne de robòtica i programació. Aquí trobaràs el recull de tota la meva feina técnica en HTML, CSS i Data Science.</p>
-          <a href="#projects" class="btn btn-light btn-lg px-4 shadow-sm text-primary fw-bold">Veure Projectes</a>
-        </div>
-        <div class="col-lg-5 d-none d-lg-block text-center">
-          <i class="fa-solid fa-code-laptop" style="font-size: 15rem; opacity: 0.8;"></i>
-        </div>
-      </div>
-    </div>
-  </header>
+  <main class="container py-5">
+    <h1 class="display-4 fw-bold mb-4" style="color: #0d6efd;">Benvinguts als Projectes 🚀</h1>
+    
+    <p class="lead mb-5">
+      Em dic <u>Richmon</u> ✌️, sóc <i>alumne</i> de <b>robòtica i programació</b> de 1r de Batxillerat de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'Institut Pompeu Fabra</a>. Aquest és el punt de partida per editar tot i fer projectes amb el professor Francesc Pérez.
+    </p>
 
-  <main class="container mb-5" id="projects">
-    <div class="row g-4 text-center">
-      <div class="col-12 mb-2">
-        <h2 class="fw-bold">Les meves àrees de treball</h2>
-        <hr class="mx-auto bg-primary" style="width: 50px; height: 3px;">
-      </div>
-
-      <div class="col-md-4">
-        <div class="card project-card p-4">
-          <div class="card-body">
-            <div class="mb-3 text-primary"><i class="fa-solid fa-mask-face fa-3x"></i></div>
-            <h4 class="card-title fw-bold">Air Pollution</h4>
-            <p class="card-text text-muted small">Anàlisi de dades meteorològiques i pol·lució a Barcelona utilitzant R Studio.</p>
-            <a href="https://rasare1.github.io/barcelona/results" class="btn btn-outline-primary btn-sm">Veure Resultats</a>
-          </div>
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="icon-box text-danger"><i class="fa-brands fa-html5"></i> Estructura i Forma</div>
+          <p class="text-muted">Aquesta pàgina està escrita en <strong>html</strong> que dona l'estructura física i utilitza <strong>CSS</strong> que ens ajuda a donar forma a la web (paràgrafs, títols, llistes, imatges, links).</p>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card project-card p-4 border-primary shadow">
-          <div class="card-body">
-            <div class="mb-3 text-danger"><i class="fa-solid fa-robot fa-3x"></i></div>
-            <h4 class="card-title fw-bold text-danger">Braç Robòtic</h4>
-            <p class="card-text text-muted small">Càlculs de cinemàtica directa i inversa aplicada a braços robòtics industrials.</p>
-            <a href="https://rasare1.github.io/cdirecta" class="btn btn-danger btn-sm">Explorar Robot</a>
-          </div>
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="icon-box text-warning"><i class="fa-brands fa-js"></i> Interactivitat</div>
+          <p class="text-muted">A més utilitza <strong>JavaScript</strong>, que proporciona tota la interactivitat de la pàgina web, com el canvi de mode fosc i els menús dinàmics.</p>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card project-card p-4">
-          <div class="card-body">
-            <div class="mb-3 text-success"><i class="fa-solid fa-microchip fa-3x"></i></div>
-            <h4 class="card-title fw-bold text-success">Arduino</h4>
-            <p class="card-text text-muted small">Programació de circuits i automatització de leds amb hardware real.</p>
-            <a href="https://github.io/rasare1/barcelona" class="btn btn-outline-success btn-sm">Veure Circuits</a>
-          </div>
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="icon-box text-primary"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+          <p class="text-muted">Utilitza biblioteques externes com <strong>Bootstrap</strong>, que conté CSS predefinit i ens permet fer menús desplegables i dissenys adaptatius fàcilment.</p>
         </div>
       </div>
-    </div>
 
-    <div class="row mt-5">
-      <div class="col-lg-8 mx-auto bg-light p-5 rounded-4 border shadow-sm">
-        <h3 class="fw-bold mb-3"><i class="fa-solid fa-gears me-2"></i>Darrera d'aquesta web...</h3>
-        <p>Aquesta pàgina utilitza <strong>Bootstrap 5</strong> per l'estructura i <strong>FontAwesome</strong> per la iconografia. Està programada totalment en HTML per mantenir una estructura física neta, mentre que el CSS s'encarrega de donar forma visual a cada paràgraf i llista.</p>
-        <p>La interactivitat de la web i el sistema de <strong>Mode Fosc</strong> estan gestionats amb <strong>JavaScript</strong>, permetent que l'usuari triï la seva experiència visual preferida.</p>
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="icon-box text-info"><i class="fa-solid fa-font-awesome"></i> FontAwesome</div>
+          <p class="text-muted">Incloem la biblioteca d'estil <strong>Font-Awesome</strong> per utilitzar icones i dibuixos vectorials que fan la interfície més intuïtiva i visual.</p>
+        </div>
       </div>
+
     </div>
   </main>
 
-  <footer class="text-center py-4 text-muted">
-    <p>© 2026 Richmon - Institut Pompeu Fabra</p>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Tu script de Dark Mode original
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle.querySelector('i');
-
     themeToggle.addEventListener('click', () => {
       if (document.body.getAttribute('data-bs-theme') === 'dark') {
         document.body.setAttribute('data-bs-theme', 'light');
-        themeIcon.className = 'fa-solid fa-moon text-warning';
+        themeIcon.className = 'fa-solid fa-moon';
       } else {
         document.body.setAttribute('data-bs-theme', 'dark');
-        themeIcon.className = 'fa-solid fa-sun text-warning';
+        themeIcon.className = 'fa-solid fa-sun';
       }
     });
   </script>
