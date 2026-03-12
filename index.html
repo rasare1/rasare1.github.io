@@ -4,172 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web de ℝ𝕚𝕔𝕙𝕞𝕠𝕟</title>
-  <!--Link és un codi html que permet unir o linkar arxius CSS. Els arxius CSS són conjunt de codis que ens permet donar estil
-  a la pàgina . CSS significa full d'estill en cascada i donar mrges sl text, triar el tipues de lletra, el tamany de lletra, el interliniat. En 
-  cascada vol dir que afecta a diverses pàgines, una darrere l'altre. Les dues línies següents són CDN: Content Delivery Network, és a dir, una adreça 
-  d'internet on està una biblioteca amb instruccions que ens ajuden a fer estils desplegables. Booststrap permet fer menús desplegables amb estil (la línia dels)
-  . La segona línia inclou  lan biblíoteca d'estil font-awesome, perquè inclou fonts o típus de lletra amb símbols i dibuixos amb icones. Si no poso o 
-  m'oblido les dues línies, següents no funcionarà , perquè algunes línies que estàn mes endevant. Per exemple la línia 26 i 27 no funcionarà, perquè 
-  dropdown-item pertany a Bootstrap. Font-awesome la línia 93, 95, 96 
-  no dibuixarien icones en el menú, exemples: fa-code-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  
   <style>
-    /* 1. Submenús en mode fosc */
-    body[data-bs-theme="dark"] .dropdown-menu {
-      background-color: #2c2c2c !important;
-      border-color: #444;
-    }
-    body[data-bs-theme="dark"] .dropdown-item {
-      color: #f8f9fa !important;
-    }
-    body[data-bs-theme="dark"] .dropdown-item:hover,
-    body[data-bs-theme="dark"] .dropdown-item:focus {
-      background-color: #3c3c3c !important;
-      color: #ffffff !important;
+    /* Estilos de Personalización */
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
     }
 
-    /* 2. Botó mode fosc/clar només icona */
-    #themeToggle {
+    body {
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Hero Section - El toque profesional */
+    .hero {
+      background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+      color: white;
+      padding: 100px 0;
+      margin-bottom: 40px;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+
+    body[data-bs-theme="dark"] .hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    }
+
+    /* Cards de Proyectos */
+    .project-card {
+      transition: transform 0.3s;
       border: none;
-      background: transparent;
-      font-size: 1.3rem;
-      color: inherit;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      height: 100%;
     }
 
-    /* 3. Hamburguesa blanca en mode fosc */
-    .navbar-toggler {
-      border: none;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-    body[data-bs-theme="dark"] .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    .project-card:hover {
+      transform: translateY(-10px);
     }
 
-    /* 4. Logo circular i adaptatiu */
-    .logo {
-      width: 40px;
-      height: 40px;
-      object-fit: cover;
-    }
-    @media (max-width: 576px) {
-      .logo {
-        width: 30px;
-        height: 30px;
-      }
-    }
-    @media (min-width: 992px) {
-      .logo {
-        width: 50px;
-        height: 50px;
-      }
-    }
+    /* Ajustes de Logo y Navbar */
+    .logo { width: 45px; height: 45px; object-fit: cover; }
+    #themeToggle { border: none; background: transparent; font-size: 1.5rem; cursor: pointer; }
+    
+    /* Navbar blanca/oscura */
+    body[data-bs-theme="dark"] .navbar { background-color: #1a1a1a !important; }
   </style>
 </head>
 <body data-bs-theme="light">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
-    <div class="container-fluid">
-      <!-- 5. Logo i text -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="logo.png" alt="Logo" class="logo rounded-circle me-2">
-        <span class="fw-bold">Web de Richmonッ</span>
+        <span class="fw-bold text-primary">Richmonッ</span>
       </a>
 
-      <!-- Botó menú mòbil -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menú -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Projecte 1 -->
+        <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="proj1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-diagram-project me-1"></i> NAUTICA
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="proj1Dropdown">
-              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors"><i class="fa-solid fa-code me-1"></i> Vectors Nàutics</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors/mapes"><i class="fa-solid fa-chip me-1"></i> Mapes Nàutics🗺️</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/circuit2"><i class="fa-solid fa-chip me-1"></i> Intensitat LED💡</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/dinamica"><i class="fa-solid fa-chip-1"></i> Projecte Nautica🛥️</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/distancies"><i class="fa-solid fa-chip me-1"></i> Distàncies</a></li>
-              
-              
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">NAUTICA</a>
+            <ul class="dropdown-menu shadow">
+              <li><a class="dropdown-item" href="https://github.io/rasare1/vectors">Vectors Nàutics</a></li>
+              <li><a class="dropdown-item" href="https://github.io/rasare1/dinamica">Projecte Nautica🛥️</a></li>
             </ul>
           </li>
-          <!-- Projecte 2 -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-folder-open me-1"></i> BRAÇ ROBÒTIC 
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
-              <li><a class="dropdown-item" href="https://rasare1.github.io/cdirecta"><i class="fa-solid fa-chart-line me-1"></i> CINEMÀTICA DIRECTA🤖</a></li>
-              <li><a class="dropdown-item" href="https://rasare1.github.io/cinversa"><i class="fa-solid fa-cogs me-1"></i> CINEMÀTICA INVERSA🤖</a></li>
-               <li><a class="dropdown-item" href="https://rasare1.github.io/distancies"><i class="fa-solid fa-cogs me-1"></i> DISTÀNCIES🗺️</a></li>
-               <li><a class="dropdown-item" href="https://rasare1.github.io/gpsmillorat"><i class="fa-solid fa-cogs me-1"></i> GPS🗺️</a></li>
-              <li><a class="dropdown-item" href="https://rasare1.github.io/cinematica"><i class="fa-solid fa-cogs me-1"></i> CINEMÀTICA ROBÒTICA🤖</a></li>
-              <li><a class="dropdown-item" href="https://rasare1.github.io/dinamica"><i class="fa-solid fa-cogs me-1"></i> DINÀMICA ROBÒTICA🤖</a></li>
-              
-            </ul>
+          <li class="nav-item ms-lg-3">
+            <button id="themeToggle"><i class="fa-solid fa-moon text-warning"></i></button>
           </li>
-
-           <!-- Projecte 3 -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-folder-open me-1"></i> Arduino 
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
-             <li><a class="dropdown-item" href="https://github.io/rasare1/barcelona"><i class="fa-solid fa-microchip me-1"></i> Barcelona🔵🔴</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/circuit1"><i class="fa-solid fa-microchip me-1"></i> Blinking😉</a></li>
-              <li><a class="dropdown-item" href="https://github.io/rasare1/circuit2"><i class="fa-solid fa-microchip me-1"></i> Intensitat LED💡</a></li>
         </ul>
-
-              </li>
-
-           <!-- Projecte 4 -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-head-side-mask me-1"></i> AIR POLLUTION
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
-               <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/introduction"><i class="fa-solid fa-head-side-mask me-1"></i> Introduction </a></li>
-              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/materialsandmethods"><i class="fa-solid fa-head-side-mask me-1"></i> Materials and Methods </a></li>
-              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/results"><i class="fa-solid fa-head-side-mask me-1"></i> Results</a></li>
-              <li><a class="dropdown-item" href="https://rasare1.github.io/barcelona/conclusions"><i class="fa-solid fa-head-side-mask me-1"></i> Conclusions </a> </li>
-        </ul>
-        <!-- Botó mode clar/fosc -->
-        <button id="themeToggle" class="ms-2"><i class="fa-solid fa-moon"></i></button>
       </div>
     </div>
   </nav>
 
-  <!-- Contingut -->
-  <main class="container py-5">
-    <h1 class="display-5 fw-bold mb-4">Benvinguts als Projectes</h1>
-    <p class="lead">Em dic <u>Richmon</u> &#9996;, sóc <i>alumne</i> de <b>robótica i programació</b> de 1r de Batxillerat de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'Institut Pompeu Fabra</a>. Aquest és el punt de partida per editar tot i fer projectes amb el professor Francesc Pérez.<p>Aquesta pàgina està escrita en html (llenguatge de marques d'hipertext) que dona l'estructura física i utilitza CSS (fulles d'estil en cascada) que ens ajuda a donar forma a la web(paràgrafs,títol,llistes,imatges,links,audio,videos). </p>
-   <p>Aquesta pàgina està escrita en html i utilitza  (llenguatge de marquest d'hípertexts) que dona l'estructura física i utilitza CSS (fulles d'estil en casacada) que ens ajuda </p>
-    <p>A mes utilitza JavaScript que proporciona tota la interactivitat de la pàgina web</p>
-    <p>Utilitza biblioteques externs com bootstrap que conté i CSS i que ens permet fer un menu desplegable i posar un logo facilment</p>
-</main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <header class="hero">
+    <div class="container text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-3 fw-bold">Benvinguts als Projectes</h1>
+          <p class="lead mb-4">Sóc en <strong>Richmon</strong>, alumne de robòtica i programació. Aquí trobaràs el recull de tota la meva feina técnica en HTML, CSS i Data Science.</p>
+          <a href="#projects" class="btn btn-light btn-lg px-4 shadow-sm text-primary fw-bold">Veure Projectes</a>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block text-center">
+          <i class="fa-solid fa-code-laptop" style="font-size: 15rem; opacity: 0.8;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mb-5" id="projects">
+    <div class="row g-4 text-center">
+      <div class="col-12 mb-2">
+        <h2 class="fw-bold">Les meves àrees de treball</h2>
+        <hr class="mx-auto bg-primary" style="width: 50px; height: 3px;">
+      </div>
+
+      <div class="col-md-4">
+        <div class="card project-card p-4">
+          <div class="card-body">
+            <div class="mb-3 text-primary"><i class="fa-solid fa-mask-face fa-3x"></i></div>
+            <h4 class="card-title fw-bold">Air Pollution</h4>
+            <p class="card-text text-muted small">Anàlisi de dades meteorològiques i pol·lució a Barcelona utilitzant R Studio.</p>
+            <a href="https://rasare1.github.io/barcelona/results" class="btn btn-outline-primary btn-sm">Veure Resultats</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card project-card p-4 border-primary shadow">
+          <div class="card-body">
+            <div class="mb-3 text-danger"><i class="fa-solid fa-robot fa-3x"></i></div>
+            <h4 class="card-title fw-bold text-danger">Braç Robòtic</h4>
+            <p class="card-text text-muted small">Càlculs de cinemàtica directa i inversa aplicada a braços robòtics industrials.</p>
+            <a href="https://rasare1.github.io/cdirecta" class="btn btn-danger btn-sm">Explorar Robot</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card project-card p-4">
+          <div class="card-body">
+            <div class="mb-3 text-success"><i class="fa-solid fa-microchip fa-3x"></i></div>
+            <h4 class="card-title fw-bold text-success">Arduino</h4>
+            <p class="card-text text-muted small">Programació de circuits i automatització de leds amb hardware real.</p>
+            <a href="https://github.io/rasare1/barcelona" class="btn btn-outline-success btn-sm">Veure Circuits</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto bg-light p-5 rounded-4 border shadow-sm">
+        <h3 class="fw-bold mb-3"><i class="fa-solid fa-gears me-2"></i>Darrera d'aquesta web...</h3>
+        <p>Aquesta pàgina utilitza <strong>Bootstrap 5</strong> per l'estructura i <strong>FontAwesome</strong> per la iconografia. Està programada totalment en HTML per mantenir una estructura física neta, mentre que el CSS s'encarrega de donar forma visual a cada paràgraf i llista.</p>
+        <p>La interactivitat de la web i el sistema de <strong>Mode Fosc</strong> estan gestionats amb <strong>JavaScript</strong>, permetent que l'usuari triï la seva experiència visual preferida.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-4 text-muted">
+    <p>© 2026 Richmon - Institut Pompeu Fabra</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Mode clar/fosc amb canvi d'icona
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle.querySelector('i');
 
     themeToggle.addEventListener('click', () => {
       if (document.body.getAttribute('data-bs-theme') === 'dark') {
         document.body.setAttribute('data-bs-theme', 'light');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+        themeIcon.className = 'fa-solid fa-moon text-warning';
       } else {
         document.body.setAttribute('data-bs-theme', 'dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        themeIcon.className = 'fa-solid fa-sun text-warning';
       }
     });
   </script>
