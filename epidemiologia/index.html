@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌫️ Problema · Contaminació i infeccions respiratòries · Martorell</title>
+    <title>Barcelona Observatori-Fabra🗺️</title>
     <!-- MathJax per renderitzar equacions -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <style>
@@ -189,15 +189,15 @@
             <div>
                 <h1>🌫️ Com afecta la contaminació aèria a les incidències d'infeccions respiratòries diàries?</h1>
                 <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px;">
-                    <span class="badge">📍 Martorell · 2012 – 2025</span>
+                    <span class="badge">📍 Barcelona Observatori-Fabra · 2011 – 2025</span>
                     <span class="badge">📊 5108 dies analitzats</span>
                     <span class="badge">🧪 Epidemiologia ambiental</span>
                 </div>
             </div>
-            <div class="city-highlight">🏭 Martorell · dades dels servidors XPVCA, Meteocat i SIVIC</div>
+            <div class="city-highlight">🏭 Barcelona Observatori-Fabra · dades dels servidors XPVCA, Meteocat i SIVIC</div>
         </div>
         <p style="margin-top: 20px; font-size: 1.1rem; background: #e6f0ea; padding: 12px 24px; border-radius: 50px;">
-            <strong>Problema clàssic:</strong> A partir del conjunt de dades diàries de qualitat de l'aire (NO₂, NOX, PM10, O₃,) i incidència d'infeccions respiratòries (per 1000 habitants) registrades a Martorell entre 2012 i 2025, es demana avaluar l'associació entre la contaminació i la salut respiratòria, calcular indicadors de risc i interpretar els pics detectats.
+            <strong>Problema clàssic:</strong> A partir del conjunt de dades diàries de qualitat de l'aire (NO₂, NOX, PM10, O₃,) i incidència d'infeccions respiratòries (per 1000 habitants) registrades a Barcelona Observatori-Fabra entre 2011 i 2025, es demana avaluar l'associació entre la contaminació i la salut respiratòria, calcular indicadors de risc i interpretar els pics detectats.
         </p>
     </div>
 
@@ -298,13 +298,30 @@
             <div class="step-header"><span class="step-num">4</span><span style="font-size: 1.4rem; font-weight: 600;">Anàlisi de pics i estacionalitat</span></div>
             <p>El sistema ha detectat 15 pics (incidència > percentil 99). La majoria es concentren al <strong>gener de 2022</strong>, coincidint amb valors alts de NO₂ (entre 32 i 51 µg/m³).</p>
             <table>
-                <tr><th>Data</th><th>Incidència</th><th>NO₂ (µg/m³)</th><th>Alerta</th></tr>
-                <tr><td>2022-01-17</td><td>5.27</td><td>35.4</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-19</td><td>4.37</td><td>41.9</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-10</td><td>4.36</td><td>46.1</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-24</td><td>4.26</td><td>40.4</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-18</td><td>3.94</td><td>43.2</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>...</td><td>...</td><td>...</td><td></td></tr>
+               <tr>
+            <td>2022-01-17<br>00:00:00</td>
+            <td>4.85</td>
+            <td>7.2</td>
+            <td>⚠️ HIGH<br>PEAK</td>
+        </tr>
+        <tr>
+            <td>2022-01-10<br>00:00:00</td>
+            <td>4.85</td>
+            <td>11.3</td>
+            <td>⚠️ HIGH<br>PEAK</td>
+        </tr>
+        <tr>
+            <td>2022-01-03<br>00:00:00</td>
+            <td>4.32</td>
+            <td>11</td>
+            <td>⚠️ HIGH<br>PEAK</td>
+        </tr>
+        <tr>
+            <td>2022-01-24<br>00:00:00</td>
+            <td>4.17</td>
+            <td>8</td>
+            <td>⚠️ HIGH<br>PEAK</td>
+        </tr>
             </table>
             <p>En aquests episodis la incidència multiplica per 3,5 la mitjana. Aplicant la fracció atribuïble, es pot estimar l'excés de casos:</p>
             <div class="formula-block">
@@ -312,7 +329,7 @@
                 \text{Excés diari} = (\text{incidència pic} - \text{incidència basal}) \times \frac{\text{població}}{1000}
                 \]
             </div>
-            <p>Per a Martorell (~28.000 habitants), un pic de 5.27 suposa unes \( (5.27-1.38)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
+            <p>Per a Barcelona Observatori-Fabra  (~1.7millons habitants). Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
         </div>
 
         <!-- PAS 5 -->
@@ -320,8 +337,7 @@
             <div class="step-header"><span class="step-num">5</span><span style="font-size: 1.4rem; font-weight: 600;">Tendències temporals (2012-2025)</span></div>
             <p>L'anàlisi de tendència mostra una lleugera reducció de la incidència mitjana a partir de 2020, possiblement per millores en la qualitat de l'aire i canvis en mobilitat. No obstant això, els hiverns continuen presentant pics associats a NO₂ elevat.</p>
             <div style="display: flex; gap: 20px; justify-content: space-around; background: #e2eee7; border-radius: 24px; padding: 16px;">
-                <div><strong>2012-2019</strong><br>Incid. mitjana ≈ 1.58</div>
-                <div><strong>2020-2025</strong><br>Incid. mitjana ≈ 1.42</div>
+                <div><strong>2011-2025</strong><br>Incid. mitjana ≈ 1.69.</div>
                 <div><strong>Reducció</strong><br>≈ 10%</div>
             </div>
             <p style="margin-top: 20px;">Els mesos d'hivern (gener-febrer) concentren els valors més alts tant de NO₂ com d'incidència, confirmant el patró estacional típic de les infeccions respiratòries agreujades per contaminació.</p>
@@ -333,10 +349,12 @@
         <h2>📝 Resum i conclusions del problema</h2>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
-                <p>✔️ <strong>Associació significativa:</strong> \(r = 0.368\) (NO₂) i RR = 1.16.<br>
+                <p>✔️ <strong>Associació significativa:</strong> \(Lag 0: r = 0,225\) (NO₂).<br>
                 ✔️ <strong>Fracció atribuïble:</strong> 13.5% de la incidència en dies contaminants.<br>
-                ✔️ <strong>Efecte agut:</strong> màxima correlació a lag 0-1.<br>
-                ✔️ <strong>Pics d'alerta:</strong> gener 2022, amb incidències >5 per 1000.</p>
+                ✔️ <strong>Efecte agut:</strong> NO2: Mostra la correlació positiva més forta amb la incidència el mateix dia (Lag 0: r = 0,225).
+                    La correlació disminueix significativament amb els retards posteriors..<br>
+                ✔️ <strong>Pics d'alerta:</strong> Els dies d'incidència més alts es van produir el gener del 2022, 
+                    amb el pic el 17/01/2022 en 4,853 casos/1.000 (el NO2 aquell dia va ser de 7,25 µg/m³)..</p>
             </div>
             <div style="background: #f2f9f5; border-radius: 20px; padding: 16px;">
                 <strong>🌱 Mesures recomanades:</strong> reforçar la vigilància epidemiològica en episodis de contaminació, reduir el trànsit en dies d'estabilitat atmosfèrica i promoure l'ús de transport públic / zones de baixes emissions.
@@ -344,12 +362,12 @@
         </div>
         <hr style="margin: 24px 0 12px; border-top: 2px solid #bdd6ca;">
         <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
-            <span style="background: #1b4e3f; color: white; padding: 6px 24px; border-radius: 60px;">📍 Dades reals processades · Martorell</span>
+            <span style="background: #1b4e3f; color: white; padding: 6px 24px; border-radius: 60px;">📍 Dades reals processades · Barcelona Observatori Fabra</span>
             <span class="badge">🌫️ NO₂ · PM · O₃ · SO₂ · 5108 dies</span>
             <span style="margin-left: auto; font-style: italic;">Anàlisi estil OMS · Educatiu</span>
         </div>
         <p class="footnote" style="margin-top: 18px;">
-            * Els càlculs es basen en el conjunt de dades obtingudes de servidors de la Generalitat de Catalunya de Martorell i municipis propers. Totes les fórmules s'han verificat amb les mitjanes i recomptes indicats.
+            * Els càlculs es basen en el conjunt de dades obtingudes de servidors de la Generalitat de Catalunya de Barcelona Observatori Fabra i municipis propers. Totes les fórmules s'han verificat amb les mitjanes i recomptes indicats.
         </p>
     </div>
 
