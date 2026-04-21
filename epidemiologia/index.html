@@ -386,6 +386,40 @@ Com s'interpreta: Un AR% del 90% en fumadors vol dir que "el 90% dels càncers d
                 </p>
             </div>
         </div>
+          <div class="step">
+            <div class="step-header">
+                <span class="step-num">6</span>
+                <span style="font-size: 1.4rem; font-weight: 600;">Model de Poisson (explicació bàsica)</span>
+            </div>
+
+            <p>El <strong>model de Poisson</strong> s’utilitza per calcular la probabilitat que passi un cert nombre d’esdeveniments en un interval de temps o espai.</p>
+
+            <ul style="margin: 15px 0 15px 30px;">
+                <li>📊 Exemple: nombre de casos en un dia</li>
+                <li>⏱️ Esdeveniments aleatoris però amb una mitjana fixa</li>
+            </ul>
+
+            <div class="formula-block">
+                \[
+                P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
+                \]
+            </div>
+
+            <p><strong>On:</strong></p>
+            <ul style="margin: 10px 0 15px 30px;">
+                <li>\(\lambda\) = mitjana d’esdeveniments</li>
+                <li>\(k\) = nombre d’esdeveniments</li>
+                <li>\(e\) ≈ 2.718</li>
+                <li>\(k!\) = factorial</li>
+            </ul>
+
+            <p><strong>Interpretació:</strong> Aquest model ens diu la probabilitat que passin \(k\) casos en un dia si sabem que de mitjana en passen \(\lambda\).</p>
+
+            <div style="background: #e2eee7; border-radius: 20px; padding: 16px; margin-top: 15px;">
+                💡 <strong>Aplicació en aquest estudi:</strong> Podem utilitzar el model de Poisson per estimar la probabilitat de tenir un cert nombre d’infeccions respiratòries en un dia concret a Barcelona.
+            </div>
+        </div>
+        
         <hr style="margin: 24px 0 12px; border-top: 2px solid #bdd6ca;">
         <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
             <span style="background: #1b4e3f; color: white; padding: 6px 24px; border-radius: 60px;">📍 Dades reals processades · Barcelona Observatori Fabra</span>
