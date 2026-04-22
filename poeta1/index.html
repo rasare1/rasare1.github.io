@@ -15,12 +15,20 @@
          El body bes tot el contingut de la pàgina. Font-family és el tipus de lletra i buscarà arial i si
         no la troba buscarà qualsevol sans-serif (sense floritudes a les lletres). hi ha 3 grans grups de lletres que són 
         serif, sans-serif i monocode.
-        Serif:amb floritudes. Monocode: amplada de cada lletra*/
+        Serif:amb floritudes. Monocode: amplada de cada lletra sempre la mateixa i això fa per codi. El tipus de lletra més comú com linies
+        Sans-serif: arial és la lletra més comuna
+        Monocode/Monospace: El més comú és Courier New.*/
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
+            /*Amplada màxima */
             margin: 0 auto;
+            /*Margin es el marge exterior*/
             padding: 20px;
+            /*Padding és el marge interior*/
+            /*Tan margin com padding poden tenir 1,2,3 o 4 propietats de pixels 
+            si té un número de pixels afectara  a totes direccions, si te dos números, és adalt i abaix, per exemple 0 auto a dalt
+            i abaix  i auto dreta i esquerra. Si tenim 3 numeros, la primera adalt, la segona es abaix, i la ultima es dreta i esquerra*/
         }
         
         button {
