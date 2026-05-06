@@ -110,7 +110,7 @@ i manting a1 i a2  i obtindré com a resultat q1 i -->
 
 <script>
 
-function calculatePosition() {
+function calculateAngles() {
 
   // Agafar les dades introduïdes per l'usuari
 
@@ -119,15 +119,15 @@ function calculatePosition() {
   //ParseFloat és una funció que converteix el que ha posat l'usuari en un floating point number, o numero decimal
   //getElementById agafa(get) l'element que té l'identificador.
 
-  let a2 = parseFloat(document.getElementById('a2).value);
+  let a2 = parseFloat(document.getElementById('a2').value);
 
   let x = parseFloat(document.getElementById('x').value); // Grados
 
-  let y = parseFloat(document.getElementById('x').value); // Grados
+  let y = parseFloat(document.getElementById('y').value); // Grados
 
-  //let q1 = q1_deg * Math.PI / 180; // Convertir graus a radians
+  let d = Math.sqrt(x*x+y*y);//calculem amb pitagores la distància de la hipotenusa del braç ròbotic en posició (x,y).
 
- // let q2 = q2_deg * Math.PI / 180; // Convertir graus a radians
+  
 
 
   // **Mostrar els contenidors de sortida**
